@@ -151,5 +151,7 @@ opt -passes=lower-invoke,simplifycfg combine_rn.bc -o before_split.bc
 opt -load-pass-plugin $INST_LIB_PATH/build/libsplit.so -passes=splitbb < before_split.bc > opt.bc
 ```
 
+The code of gemmini-rocc-tests we use to run in RTL simulation to validate cosim is provided in https://github.com/charlieisacat/cosim_validation.
+
 # TODO
 We will release code for simulating custom instructions soon.

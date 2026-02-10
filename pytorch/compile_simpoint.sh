@@ -2,7 +2,8 @@ INST_LIB_PATH=$BASE_PATH/llvm
 
 llvm-link resnet.ll $BASE_PATH/test_dnn/test.ll $BASE_PATH/gemmini_interface/gemmini_runtime.ll  -o combine.bc
 opt -load-pass-plugin $INST_LIB_PATH/build/librename.so -passes=renameBBs < combine.bc > combine_rn.bc
-opt -passes=lower-invoke,simplifycfg combine_rn.bc -o opt.bc
+opt -passes=lower-invoke,simplifycfg combine_rn.bc -o before_split.bc
+opt -load-pass-plugin $INST_LIB_PATH/build/libsplit.so -passes=splitbb < before_split.bc > opt.bc
 
 # BBV collection, please change to your MLIR path
 opt -load-pass-plugin $INST_LIB_PATH/build/libprofile.so -passes=profile -threshold 2000000 < opt.bc > combine_run_profile.bc
