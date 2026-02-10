@@ -156,5 +156,5 @@ The code of gemmini-rocc-tests we use to run in RTL simulation to validate cosim
 # TODO
 We will release code for simulating custom instructions soon, which is correspond to our paper:
 ```bash
-CISim: ISA-Agnostic Custom Instruction Simulation for General-Purpose ProcessorCiSim
+CISim: ISA-Agnostic Custom Instruction Simulation for General-Purpose Processor
 ```
