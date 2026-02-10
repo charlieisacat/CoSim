@@ -1,13 +1,22 @@
 # CoSim: An Instruction-Level Simulator for Systolic Array-based Matrix Engine in a CPU Paradigm
 
-# Requirements & Setup
+# Requirements
 - LLVM/Clang/MLIR-22
 - YAML
 - Python 3.11
 - IREE 3.8.0
 - ONNX 1.19.1
 
-# Prepare
+
+# Setup
+
+```bash
+git clone git@github.com:charlieisacat/CoSim.git
+cd cosim
+export BASE_PATH=/path/to/cosim/
+export INST_LIB_PATH=/path/to/cosim/llvm
+```
+
 1. Please search the repository to replace `/staff/haoxiaoyu/mlir_project/llvm-project/build/externals/llvm-project/install/lib` to your own mlir lib path
 
 2. Check hardware config file, e.g., `sim/boom_ws.yml`. If you want to use DRAMSim2, please change the DRAM config paths first. 
@@ -19,12 +28,6 @@ DRAM:
   device : "/path/to/cosim/sim/DDRsys.txt"
 ```
 
-```bash
-git clone 
-cd cosim
-export BASE_PATH=/path/to/cosim/
-export INST_LIB_PATH=/path/to/cosim/llvm
-```
 # Compile
 ## Compile LLVM Pass
 
