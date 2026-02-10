@@ -1,5 +1,10 @@
 # CoSim: An Instruction-Level Simulator for Systolic Array-based Matrix Engine in a CPU Paradigm
 
+An enhanced version of our paper to be published in DATE'26:
+```
+ CISim: ISA-Agnostic Custom Instruction Simulation for General-Purpose Processor
+```
+
 # Requirements
 - LLVM/Clang/MLIR-22
 - YAML
@@ -166,7 +171,4 @@ opt -load-pass-plugin $INST_LIB_PATH/build/libsplit.so -passes=splitbb < before_
 The code of gemmini-rocc-tests we use to run in RTL simulation to validate cosim is provided in https://github.com/charlieisacat/cosim_validation.
 
 # TODO
-We will release code for simulating custom instructions soon, which is corresponding to our paper:
-```bash
-CISim: ISA-Agnostic Custom Instruction Simulation for General-Purpose Processor
-```
+We will release code for simulating custom instructions soon, which is corresponding to our paper CISim.
