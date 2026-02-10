@@ -1,0 +1,2 @@
+add_subdirectory(gemmini_matmul)
+add_subdirectory(gemmini_conv)

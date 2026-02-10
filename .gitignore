@@ -1,0 +1,11 @@
+.vscode
+data
+ispass_test
+rubbish
+temp_results
+*rubbish
+icsexample
+auto*
+test_spec/
+test_*
+ics_*

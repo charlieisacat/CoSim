@@ -1,0 +1,7 @@
+*.out
+*.txt
+*.bc
+*.o
+*.ll
+resnet_run
+resnet_run_clean
