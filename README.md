@@ -58,9 +58,18 @@ make -j
 
 ## Compile Runtime Interface
 
+For MLIR customization:
 ```bash
 cd gemmini_interface
 ./gen_ir.sh
+```
+
+For custom instructions to operate SA:
+```bash
+cd manual
+mkdir build && cd build
+cmake ..
+make -j
 ```
 
 ## Compile Wrapper for DNNs
