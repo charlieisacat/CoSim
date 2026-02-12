@@ -5,6 +5,8 @@ An enhanced version of our paper to be published in DATE'26:
  CISim: ISA-Agnostic Custom Instruction Simulation for General-Purpose Processor
 ```
 
+We have borrowed some code from Stonne (https://github.com/stonne-simulator/stonne), but have modified a lot.
+
 # Requirements
 - LLVM/Clang/MLIR-22
 - YAML
@@ -172,3 +174,5 @@ The code of gemmini-rocc-tests we use to run in RTL simulation to validate cosim
 
 # TODO
 We will release code for simulating custom instructions soon, which is corresponding to our paper CISim.
+
+Some comments in code should be corrected and more comments should be added. Maybe you will find some code is not consistent with comments or the comments are confusing, we are working on it to make it clear.
