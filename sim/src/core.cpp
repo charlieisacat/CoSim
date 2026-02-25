@@ -1124,9 +1124,12 @@ std::vector<std::shared_ptr<DynamicOperation>> Core::preprocess()
                 // std::cout<<cond<<"\n";
                 // br->mispredict = !bp->predict(insn->getUID(), cond);
 
-                // br->pred = bp->predict(insn->getUID(), cond);
-                br->pred = bp->predict(insn->getUID(), 0);
-                br->mispredict = (br->pred != cond);
+                if(bp->type == bp_tage) {
+                    br->pred = bp->predict(insn->getUID(), cond);
+                    br->mispredict = (br->pred != cond);
+                } else {
+                    br->mispredict = !bp->predict(insn->getUID(), cond);
+                }
 
                 // speculatively update
                 // Since we don't have a repair mechanism for the BP,
